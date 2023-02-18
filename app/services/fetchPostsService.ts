@@ -1,10 +1,10 @@
 import { readdirSync, readFileSync } from "fs";
 import path from "path";
 import { marked } from "marked";
-import { Post } from "../interfaces/Post";
+import { PostFile } from "../interfaces/Post.interface";
 
-export async function getPosts(): Promise<Post[]> {
-  let posts: Post[] = [];
+export async function getPosts(): Promise<PostFile[]> {
+  let posts: PostFile[] = [];
   const files = await getFiles();
   files.map((file) => {
     const markdownContent = readFileSync(path.join("posts", file), "utf-8");
@@ -19,7 +19,8 @@ export async function getPosts(): Promise<Post[]> {
 
 export async function getPostByFileName(
   fileName: string
-): Promise<Post | undefined> {
+): Promise<PostFile | undefined> {
+  console.log("FILE NAME: ", fileName);
   const files = await getFiles();
   files
     .filter((f) => f.replace(".md", "") === fileName)

@@ -1,4 +1,4 @@
-export interface Post {
+export interface PostFile {
   fileName: string;
   content: string;
 }
