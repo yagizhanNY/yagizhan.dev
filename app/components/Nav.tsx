@@ -1,7 +1,6 @@
 import Link from "next/link";
-import { getPosts } from "../services/fetchPostsService";
 
-export default async function Nav() {
+export default function Nav() {
   return (
     <nav className="w-full">
       <div className="flex justify-between p-8 items-center">
