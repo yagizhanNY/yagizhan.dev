@@ -1,11 +1,13 @@
-import { Inter } from "@next/font/google";
+import { getServerSession } from "next-auth";
 import LatestPost from "./components/LatestPost";
 import Posts from "./components/Posts";
 import Recommendation from "./components/Recommendation";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export default function Home() {
+  getServerSession()
+  .then(session => {
+    console.log("MAIN PAGE SESSION: ", session);
+  })
   return (
     <main className="flex flex-col justify-center items-center">
       <LatestPost></LatestPost>

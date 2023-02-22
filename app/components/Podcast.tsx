@@ -1,5 +1,3 @@
-"use client";
-
 import { PodcastInterface } from "../interfaces/Podcast.interface";
 
 export default function Podcast(props: PodcastInterface) {
