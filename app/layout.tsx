@@ -1,22 +1,21 @@
-"use client"
 import Nav from "./components/Nav";
 import "./globals.css";
-import {SessionProvider} from 'next-auth/react'
+import { SessionProvider } from "next-auth/react";
+import { ReactNode } from "react";
+import { Session } from "next-auth";
 
 export default function RootLayout({
   children,
-  session
+}: {
+  children: ReactNode;
+  session: Session;
 }) {
   return (
     <html lang="en">
       <head />
       <body className="mx-4 md:mx-48 xl:mx-96">
-        
-      <Nav></Nav>
-      <SessionProvider session={session}>
+        <Nav></Nav>
         {children}
-      </SessionProvider>
-      
       </body>
     </html>
   );
