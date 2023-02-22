@@ -1,15 +1,8 @@
 import Nav from "./components/Nav";
 import "./globals.css";
-import { SessionProvider } from "next-auth/react";
 import { ReactNode } from "react";
-import { Session } from "next-auth";
 
-export default function RootLayout({
-  children,
-}: {
-  children: ReactNode;
-  session: Session;
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head />
