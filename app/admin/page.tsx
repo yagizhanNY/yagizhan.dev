@@ -77,7 +77,7 @@ export default function Admin() {
   );
 }
 
-export async function createPost(title: string, content: string) {
+async function createPost(title: string, content: string) {
   const postDto = {
     post: {
       title: title,
