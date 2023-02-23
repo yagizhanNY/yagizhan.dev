@@ -1,3 +1,4 @@
+import { marked } from "marked";
 import { prisma } from "../../../prisma/client";
 
 interface PageProps {
@@ -23,7 +24,7 @@ export default async function Post({ params }: PageProps) {
           </p>
           <article
             className="mt-5 prose lg:prose-xl"
-            dangerouslySetInnerHTML={{ __html: post!.content }}
+            dangerouslySetInnerHTML={{ __html: marked(post!.content) }}
           ></article>
         </div>
       );
