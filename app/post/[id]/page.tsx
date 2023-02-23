@@ -9,7 +9,6 @@ interface PageProps {
 
 export default async function Post({ params }: PageProps) {
   if (params.id) {
-    console.log("ID: ", typeof Number(params.id));
     const post = await prisma.post.findFirst({
       where: {
         id: params.id.toString(),

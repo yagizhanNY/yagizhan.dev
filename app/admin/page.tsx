@@ -12,29 +12,6 @@ export default function Admin() {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
 
-  interface PostDetails {
-    title: string;
-    content: string;
-  }
-
-  // const postCreater = ({ title, content }: PostDetails) => {
-  //   prisma.post
-  //     .create({
-  //       data: {
-  //         title: title,
-  //         fileName: title + ".md",
-  //         published: true,
-  //       },
-  //     })
-  //     .then((res) => {
-  //       console.log("PRISMA RES: ", res);
-  //     });
-  // };
-
-  // const submitHandler = () => {
-  //   useSWR({ title, content }, postCreater);
-  // };
-
   useEffect(() => {
     const getSessionAsync = async () => {
       const currentSession = await getSession();
@@ -90,6 +67,4 @@ async function createPost(title: string, content: string) {
     method: "POST",
     body: JSON.stringify(postDto),
   });
-
-  console.log("API RESPONSE: ", res);
 }
