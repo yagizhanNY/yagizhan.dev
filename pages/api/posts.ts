@@ -4,7 +4,7 @@ import { prisma } from "../../prisma/client";
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<Post>
+  res: NextApiResponse<Post | Post[]>
 ) {
   if (req.method === "POST") {
     const post = JSON.parse(req.body) as Post;
@@ -13,5 +13,24 @@ export default async function handler(
     });
 
     res.status(201).json(apiResponse);
+  }
+
+  if (req.method === "GET") {
+    const posts = await prisma.post.findMany({
+      orderBy: {
+        createdAt: "desc",
+      },
+    });
+
+    res.status(200).json(posts);
+  }
+
+  if (req.method === "DELETE") {
+    const id = req.query["id"];
+    await prisma.post.delete({
+      where: {
+        id: id?.toString(),
+      },
+    });
   }
 }
