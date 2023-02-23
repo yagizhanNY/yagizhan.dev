@@ -16,5 +16,6 @@ model Post {
   updatedAt DateTime @updatedAt
   title     String
   fileName  String
+  content   String
   published Boolean  @default(false)
 }

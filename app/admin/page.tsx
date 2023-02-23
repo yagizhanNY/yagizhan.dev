@@ -60,8 +60,8 @@ async function createPost(title: string, content: string) {
       title: title,
       fileName: title + ".md",
       published: true,
+      content: content,
     },
-    content: content,
   };
   const res = await fetch("/api/posts", {
     method: "POST",

@@ -1,4 +1,3 @@
-import { getPostByFileName } from "@/app/services/fetchPostsService";
 import { prisma } from "../../../prisma/client";
 
 interface PageProps {
@@ -16,7 +15,6 @@ export default async function Post({ params }: PageProps) {
     });
 
     if (post) {
-      const fileDetails = await getPostByFileName(post!.fileName);
       return (
         <div className="flex flex-col items-center">
           <h2>{post?.title}</h2>
@@ -25,7 +23,7 @@ export default async function Post({ params }: PageProps) {
           </p>
           <article
             className="mt-5 prose lg:prose-xl"
-            dangerouslySetInnerHTML={{ __html: fileDetails!.content }}
+            dangerouslySetInnerHTML={{ __html: post!.content }}
           ></article>
         </div>
       );
