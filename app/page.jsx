@@ -1,4 +1,3 @@
-import { getServerSession } from "next-auth";
 import LatestPost from "./components/LatestPost";
 import Posts from "./components/Posts";
 import Recommendation from "./components/Recommendation";

@@ -1,12 +1,13 @@
+import { Post } from ".prisma/client";
 import Link from "next/link";
-import { prisma } from "../../prisma/client";
 
 export default async function Posts() {
-  const posts = await prisma.post.findMany({
-    orderBy: {
-      createdAt: "desc",
-    },
+  const response = await fetch("http://localhost:3000/api/posts", {
+    method: "GET",
+    cache: "no-store",
   });
+
+  const posts: Post[] = await response.json();
   return (
     <div className="flex flex-col w-full justify-center max-w-xl">
       <p className="my-2 text-gray-400">Posts</p>
