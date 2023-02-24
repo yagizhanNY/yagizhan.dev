@@ -30,9 +30,6 @@ export default function Nav() {
           <li>
             <Link href={"https://github.com/yagizhanNY"}>Portfolio</Link>
           </li>
-          <li>
-            <Link href={"https://github.com/yagizhanNY"}>Journey</Link>
-          </li>
           {session?.user && (
             <li>
               <Link onClick={() => signOut()} href={"#"}>
