@@ -23,7 +23,7 @@ export default async function Post({ params }: PageProps) {
             {post?.createdAt.toString().substring(4, 15)}
           </p>
           <article
-            className="mt-5 prose lg:prose-xl"
+            className="mt-5 mx-auto w-80 md:w-full prose lg:prose-xl"
             dangerouslySetInnerHTML={{ __html: marked(post!.content) }}
           ></article>
         </div>

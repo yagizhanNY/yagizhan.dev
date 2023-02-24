@@ -28,7 +28,9 @@ export default function Nav() {
             <Link href={"/about"}>About</Link>
           </li>
           <li>
-            <Link href={"https://github.com/yagizhanNY"}>Portfolio</Link>
+            <Link target="_blank" href={"https://github.com/yagizhanNY"}>
+              Portfolio
+            </Link>
           </li>
           {session?.user && (
             <li>
