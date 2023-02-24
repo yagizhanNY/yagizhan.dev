@@ -18,7 +18,7 @@ export default async function Post({ params }: PageProps) {
     if (post) {
       return (
         <div className="flex flex-col items-center">
-          <h2>{post?.title}</h2>
+          <h2 className="text-2xl font-bold">{post?.title}</h2>
           <p className="mt-2 text-gray-400">
             {post?.createdAt.toString().substring(4, 15)}
           </p>
