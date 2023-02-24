@@ -31,14 +31,14 @@ export default function Admin() {
       <form className="flex flex-col mt-10">
         <h3 className="text-lg font-bold">Create a new Post</h3>
         <input
-          className="bg-gray-200 p-2 rounded-md mt-5"
+          className="bg-gray-100 p-2 rounded-md mt-5"
           type="text"
           placeholder="Title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
         />
         <textarea
-          className="bg-gray-200 p-2 rounded-md mt-5"
+          className="bg-gray-100 p-2 rounded-md mt-5"
           placeholder="Content"
           rows={10}
           value={content}
@@ -52,13 +52,18 @@ export default function Admin() {
           Create Post
         </button>
       </form>
-      <hr />
-      <div>
+      <div className="mt-5">
         {posts.map((post: any) => {
           return (
-            <div key={post.id}>
-              <p>{post.title}</p>
-              <button onClick={async () => await deletePost(post.id)}>
+            <div
+              className="flex justify-between items-center p-5 border rounded-md my-2"
+              key={post.id}
+            >
+              <p className="text-lg font-bold">{post.title}</p>
+              <button
+                className="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-800"
+                onClick={async () => await deletePost(post.id)}
+              >
                 Delete
               </button>
             </div>

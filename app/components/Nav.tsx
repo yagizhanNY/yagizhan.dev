@@ -3,6 +3,7 @@
 import { getSession, signOut } from "next-auth/react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { BrowserView, MobileView } from "react-device-detect";
 
 export default function Nav() {
   const [session, setSession]: any = useState({});
@@ -17,19 +18,20 @@ export default function Nav() {
 
   return (
     <nav className="w-full">
-      <div className="flex justify-between p-8 items-center">
-        <Link href={"/"} className="font-bold text-lg text-gray-700">
-          Yagizhan Necat YAKALI
+      <div className="flex justify-between p-4 md:p-8 items-center mx-auto">
+        <Link href={"/"} className="font-bold text-sm lg:text-lg text-gray-700">
+          <MobileView>YNY</MobileView>
+          <BrowserView>Yagizhan Necat YAKALI</BrowserView>
         </Link>
         <ul className="flex gap-6">
           <li>
             <Link href={"/about"}>About</Link>
           </li>
           <li>
-            <Link href={"/resume"}>Portfolio</Link>
+            <Link href={"https://github.com/yagizhanNY"}>Portfolio</Link>
           </li>
           <li>
-            <Link href={"/journey"}>Journey</Link>
+            <Link href={"https://github.com/yagizhanNY"}>Journey</Link>
           </li>
           {session?.user && (
             <li>

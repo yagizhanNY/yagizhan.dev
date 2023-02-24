@@ -5,17 +5,8 @@ export default function Podcast(props: PodcastInterface) {
     <ul className="py-2">
       <li className="flex items-center justify-between">
         <div className="flex items-center">
-          <p className="text-lg italic">{props.podcastName}</p>
-        </div>
-        <div className="flex items-center gap-4">
-          <a href={props.podcastLink} target="_blank">
-            <img
-              className="rounded-md "
-              width={32}
-              height={32}
-              src={`icons/${props.icon}.png`}
-              alt="soundcloud"
-            />
+          <a href={props.podcastLink} target="_blank" className="mx-auto">
+            <p className="italic underline">{props.podcastName}</p>
           </a>
         </div>
       </li>

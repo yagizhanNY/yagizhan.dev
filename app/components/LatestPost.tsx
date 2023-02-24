@@ -21,7 +21,7 @@ export default async function LatestPost() {
       <p className="mt-2 text-gray-400">
         {latestPost?.createdAt.toString().substring(4, 16)}
       </p>
-      <hr className="my-10" />
+      <hr className="my-5" />
     </div>
   );
 }

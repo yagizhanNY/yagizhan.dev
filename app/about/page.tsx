@@ -47,11 +47,6 @@ export default function About() {
             Github
           </a>
         </li>
-        <li>
-          <a target="_blank" href="https://github.com/yagizhanNY">
-            Resume
-          </a>
-        </li>
       </ul>
     </div>
   );

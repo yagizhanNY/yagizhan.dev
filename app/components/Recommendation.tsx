@@ -4,7 +4,7 @@ import Podcast from "./Podcast";
 export default function Recommendation() {
   return (
     <div className="flex flex-col w-full justify-center max-w-xl">
-      <p className="my-2 text-gray-400">Recommendations</p>
+      <p className="mb-4 text-gray-400">Recommendations</p>
       <h3 className="text-lg font-bold mb-2">Music 🎵</h3>
       <Music
         publishedDate="5 Mar. 2016"
@@ -33,7 +33,7 @@ export default function Recommendation() {
         icon="spotify"
       ></Podcast>
 
-      <hr className="my-10" />
+      <hr className="my-5" />
     </div>
   );
 }
