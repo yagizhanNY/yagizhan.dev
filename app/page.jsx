@@ -1,4 +1,5 @@
 import LatestPost from "./components/LatestPost";
+import Libraries from "./components/Libraries";
 import Posts from "./components/Posts";
 import Recommendation from "./components/Recommendation";
 
@@ -7,6 +8,7 @@ export default async function Home() {
   return (
     <main className="flex flex-col justify-center items-center">
       <LatestPost></LatestPost>
+      <Libraries></Libraries>
       <Recommendation></Recommendation>
       <Posts posts={posts}></Posts>
     </main>
