@@ -8,9 +8,9 @@ export default function Libraries() {
       <h3 className="text-lg font-bold mb-2">NPM</h3>
       <Link
         className="italic w-48 md:w-full underline"
-        href={"https://www.npmjs.com/package/node-network-scanner"}
+        href={"https://www.npmjs.com/package/node-network-scan"}
       >
-        node-network-scanner
+        node-network-scan
       </Link>
       <p className="text-sm mt-1 text-gray-400 italic">
         Scan the local network and find available devices with this light weight
