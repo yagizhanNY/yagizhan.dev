@@ -17,7 +17,7 @@ export default function Libraries() {
         NodeJS library. To contribute this library please follow the{" "}
         <Link
           className="underline italic"
-          href={"https://github.com/yagizhanNY/network-scanner"}
+          href={"https://github.com/yagizhanNY/node-network-scanner"}
         >
           link.
         </Link>
