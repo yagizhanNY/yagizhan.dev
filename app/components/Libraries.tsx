@@ -38,6 +38,22 @@ export default function Libraries() {
           link.
         </Link>
       </p>
+      <Link
+        className="italic w-48 md:w-full underline mt-1"
+        href={"https://www.nuget.org/packages/SiemensIXBlazor"}
+      >
+        SiemensIXBlazor
+      </Link>
+      <p className="text-sm mt-1 text-gray-400 italic">
+        Siemens IX library port for Blazor applications. To contribute this
+        library please follow the{" "}
+        <Link
+          className="underline italic"
+          href={"https://github.com/yagizhanNY/siemens-ix-blazor"}
+        >
+          link.
+        </Link>
+      </p>
 
       <hr className="my-5" />
     </div>
